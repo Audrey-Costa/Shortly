@@ -13,7 +13,7 @@ export default async function login(req, res) {
   
       await signInRepository.insertSession(token, user[0].id);
   
-      res.send(200);
+      res.send(token).status(200);
     } else {
       res.sendStatus(401);
     }
