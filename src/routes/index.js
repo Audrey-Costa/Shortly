@@ -1,10 +1,9 @@
 import { Router } from "express";
-import categories from "./categories.js";
-import customers from "./customers.js";
-import games from "./games.js";
-import rentals from "./rentals.js";
+import signIn from './signIn.js';
+import signUp from "./signUp.js";
+
 
 const router = Router();
-router.use(categories, games, customers, rentals);
-
+router.use(signIn, signUp);
+/* , urls, users, ranking */
 export default router;
